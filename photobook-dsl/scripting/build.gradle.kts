@@ -1,12 +1,18 @@
 plugins {
     kotlin("jvm")
+    application
 }
 
 group = "dev.ssch"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
+}
+
+application {
+    mainClass = "dev.ssch.photobook.scripting.ScriptRunnerKt"
+    tasks.run.get().workingDir = rootProject.projectDir
 }
 
 dependencies {
